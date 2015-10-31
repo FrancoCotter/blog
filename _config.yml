@@ -53,7 +53,7 @@ kramdown:
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "写写代码，看看动画和电影，听听音乐，感受世界"
-sidebar-avatar: img/avatar.jpg  # use absolute URL.
+sidebar-avatar: /img/avatar.jpg  # use absolute URL.
 
 
 
