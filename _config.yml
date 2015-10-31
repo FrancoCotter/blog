@@ -1,0 +1,65 @@
+# Site settings
+title: Mariano
+SEOTitle: Mariano| 博客 
+header-img: img/home-bg.jpg
+email: chockyeizo@hotmail.com
+description: "关于前端，关于吐槽，关于二次元 | 赛亚！"
+keyword: "前端、吐槽、二次元、设计、科技、技术、ココロ、初音未来粉丝、喜欢世界第一的公主殿下"
+#url: "http://huangxuan.me"
+baseurl: ""
+
+
+
+# SNS settings
+RSS: false
+#weibo_username:     huxpro
+#zhihu_username:     huxpro
+github_username:    FrancoCotter
+twitter_username:  	FrancoisGotte
+#facebook_username:  
+
+
+
+# Build settings
+highlighter: pygments
+permalink: pretty
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
+
+
+
+# Markdown settings
+# replace redcarpet to kramdown,
+# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
+# document: http://jekyllrb.com/docs/configuration/#kramdown
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+
+
+
+# Duoshuo settings
+#duoshuo_username: huxblog
+# Share component is depend on Comment so we can NOT use share only.
+#duoshuo_share: true                     # set to false if you want to use Comment without Sharing
+
+
+
+
+
+
+
+# Sidebar settings
+sidebar: true                           # whether or not using Sidebar.
+sidebar-about-description: "写写代码，看看动画和电影，听听音乐，感受世界"
+sidebar-avatar: /img/IMG_1332.jpg     # use absolute URL.
+
+
+
+# Featured Tags
+featured-tags: true                     # whether or not using Feature-Tags
+featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
+
+
