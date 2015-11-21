@@ -131,6 +131,8 @@ width:800px;
 * [ResonsiveDesign.is](https://responsivedesign.is/):Another treasure trove of resources, in addition to articles and a podcast!
 * [Resonsive Web Design Podcast](http://responsivewebdesign.com/podcast/):Speaking of podcasts, here's one co-hosted by Ethan Marcotte and Karen McGrane.
 * [Responsive Web Design,by Ethan Marcotte](http://abookapart.com/products/responsive-web-design):Ethan literally wrote the book on it and did so with the utmost clarity.
-
+  
+    
+>[原文链接](https://css-tricks.com/the-difference-between-responsive-and-adaptive-design/)
   
  
