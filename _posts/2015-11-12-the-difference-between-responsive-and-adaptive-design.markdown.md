@@ -4,7 +4,7 @@ title:      "浅谈响应式设计和适应性设计的不同（翻译）"
 subtitle:   ""
 date:       2015-11-12 17:03:00
 author:     "Mariano"
-header-img: "img/fast.png"
+header-img: "img/fast.PNG"
 tags: 
 
     - 翻译 
