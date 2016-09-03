@@ -23,20 +23,24 @@ tags:
 <inout type='radio' name='test'/>  
 ```  
 后面在跟上一个label标签，要想label标签和单选按钮对应，就必须给所有的单选按钮设置id，并让后面的label标签对应此id，如：  
-```html
+
+```html 
 <input type='radio' name='test' id='radio-one'>
 <label for='radio-one'>这是对应的radio1</label>
 <input type='radio' name='test' id='radio-two'>
 <label for='radio-two'>这是对应的radio2</label>
 <input type='radio' name='test' id='radio-three'>
 <label for='radio-three'>这是对应的radio3</label>  
-```	  
+```  
+	  
 html结构部分我们就书写完毕了，那么我们怎么通过css来实现选中取消呢，方法很简单，就是让所有的radio隐藏，通过使用为类来实现，代码如下：  
-```css  
+
+``` css 
 input[type="radio"]{display:none;}
 input[type="radio"]+label{background:#ccc;height:20px;width:50px;padding:1em 1.2em}
 input[type="radio"]:checked+label{background:orange;}  
-```	  
+```  
+	  
 方法就是这样，是不是很简单就实现了  
   
   
