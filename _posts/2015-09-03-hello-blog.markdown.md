@@ -2,7 +2,7 @@
 layout:     post
 title:      "Hello Blog"
 subtitle:   " \"Hello World, Hello Blog\""
-date:       2015-10-31 22:36:00
+date:       2015-09-03 20:36:00
 author:     "Mariano"
 header-img: "img/FL-Culture-11.jpg"
 tags:
