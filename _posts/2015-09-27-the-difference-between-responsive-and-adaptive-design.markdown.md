@@ -32,7 +32,7 @@ OK，既然这样，那我们来看看它们之间有什么不同
 响应式网站响应浏览器给予的任何尺寸。也许浏览器的宽度不是那么重要，站点通过布局调节（或者是设计功能）来适配屏幕。在这里，浏览器的<span style="background-color:#ccc">300px</span>或者<span style="background-color:#ccc">30000px</span>亦然不是那么重要了，因为布局总会得到响应。好吧，这至少来说是正确的！ 
   
 ### HTML CODE  
-     
+  
 ```html 
 <div class="module">
 	<h1>This is a responsive container</h1>
