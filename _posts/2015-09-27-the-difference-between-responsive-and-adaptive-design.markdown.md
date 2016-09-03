@@ -40,24 +40,23 @@ OK，既然这样，那我们来看看它们之间有什么不同
 </div>
 ```
   
-### SCSS CODE   
-  
-  
+### SCSS CODE  
+   
 ```sass
-	html{
-		background:#333;
-	}
-	body{
-		display:flex;
-		justify-content:center;
-		align-items:center;
-	}
-	.module{
-		background-color:white;
-		border-radius:10px;
-		padding:20px;
-		width:80%;
-	}
+html{
+	background:#333;
+}
+body{
+	display:flex; 
+	justify-content:center;
+	align-items:center;
+}
+.module{
+	background-color:white;
+	border-radius:10px;
+	padding:20px;
+	width:80%;
+}
 ```  
   
 ### JS CODE  
@@ -86,18 +85,18 @@ $(".browser").html($(window).width());
 
 ```sass  
 html{
-background:#333;
+	background:#333;
 }
 body{
-display:flex;
-justify-content:centerl
-align-items:center;
+	display:flex;
+	justify-content:centerl
+	align-items:center;
 }
 .module{
-background-color:white;
-border-radius:10px;
-padding:20px;
-width:800px;
+	background-color:white;
+	border-radius:10px;
+	padding:20px;
+	width:800px;
 }
 @meida screen and (max-width:500px){
 	.module{
