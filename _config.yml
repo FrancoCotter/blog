@@ -64,3 +64,15 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 
 
 
+
+
+# friends  
+
+friends:[
+    {
+    title:'刘琏的博客',
+    href:'http://lianliu22.com'
+    }
+]
+
+
