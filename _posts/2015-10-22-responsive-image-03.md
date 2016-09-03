@@ -20,7 +20,7 @@ tags:
 
 因此除非是艺术切换的情况，我们应该让浏览器本身来自动选择。   
  
-##显示密度描述  
+## 显示密度描述  
 显示密度的语法很直观：  
 ![]({{site.baseurl}}/img/srcset-display-density2.png)  
   
@@ -29,7 +29,7 @@ srcset属性被添加在<img>元素上的。srcset的值是一个用逗号分隔
 ```html
 <img src="cat.jpg" alt="cat" srcset="cat.jpg, cat-2X.jpg 2x">
 ```    
-##这看起来很简单...  
+## 这看起来很简单...  
   
 这很简单,试想你需要关心的是显示密度。那么我们会经常碰到吗？
 
