@@ -2,7 +2,7 @@
 layout:     post
 title:      "[转载]响应式图片101(三):图片分辨率"
 subtitle:   ""
-date:       2015-10-27 21:30:00
+date:       2015-10-22 20:30:00
 author:     "Mariano"
 header-img: "img/experience.jpg"
 tags:  
