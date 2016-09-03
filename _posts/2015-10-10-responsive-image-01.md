@@ -81,6 +81,6 @@ CB2目前没有一个响应式的网站，但是他有一个移动网站，我�
 游戏开始
 
 既然我们现在已经对响应式图片有了一个定义，我们可以开始研究这些解决方案的原理。下一节将介绍图片依赖。  
->转载自 http://www.w3cplus.com/responsive/responsive-images-101-definitions.html  
-> 原文来自 http://blog.cloudfour.com/responsive-images-101-definitions/
-
+  
+> 转载自：[http://www.w3cplus.com/responsive/responsive-images-101-definitions.html](http://www.w3cplus.com/responsive/responsive-images-101-definitions.html)     
+>原文来自：[http://blog.cloudfour.com/responsive-images-101-definitions/](http://blog.cloudfour.com/responsive-images-101-definitions/)
