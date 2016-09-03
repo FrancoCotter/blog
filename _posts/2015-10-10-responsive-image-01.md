@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "[转载]响应式图片101(一)"
+title:      "[转载]响应式图片101(一):定义"
 subtitle:   ""
 date:       2015-10-10 20:00:00
 author:     "Mariano"
