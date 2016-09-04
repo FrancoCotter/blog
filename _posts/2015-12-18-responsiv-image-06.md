@@ -11,7 +11,7 @@ tags:
     - 响应式图片
 ---    
     
-在第[3]({{site.baseurl}}/2015/10/23/responsive-image-03/)，[4]({{site.baseurl}}/2015/11/30/responsive-image-04/)，[5]({{site.baseurl}}/2015/12/07/resonsive-images-05/)部分中，我们专注于分辨率切换的解决方案。现在是时候来研究如何解决艺术指导了。
+在第[3]({{site.baseurl}}/2015/10/22/responsive-image-03/)，[4]({{site.baseurl}}/2015/11/29/responsive-image-04/)，[5]({{site.baseurl}}/2015/12/06/resonsive-images-05/)部分中，我们专注于分辨率切换的解决方案。现在是时候来研究如何解决艺术指导了。
 
 `<picture>`元素——尤其是媒体属性——被设计来简化艺术指导。    
   
