@@ -62,14 +62,3 @@ sidebar-avatar: /blog/img/avatar.jpg  # use absolute URL.
 featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
 
-
-#friend  
-friend: [
-  {
-  title:"榴莲的博客",
-  href:"http://liulian22.com"
-}
-]
-
-
-
