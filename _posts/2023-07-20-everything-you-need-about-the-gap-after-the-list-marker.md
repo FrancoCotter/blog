@@ -67,9 +67,8 @@ tags:
      
    請注意，即使列表項的 padding-left 的值為 0px，標記後面仍然有一個最小的空隙。這個間隙不能通過間隙啊 margin 或者 padding 來縮小，具體的最小間隙取決於每個瀏覽器自己的標準。  
 
-       
-   ```
-    ![]({{site.baseurl}}/img/margin-padding-position-outside.png)
+   ![]({{site.baseurl}}/img/margin-padding-position-outside.png)  
+   ``` 
     前三個屬性將整個列表（包括 marker）推倒右側。第四個屬性僅將列表項的內容推到右側。
    ```   
    總而言之，  
