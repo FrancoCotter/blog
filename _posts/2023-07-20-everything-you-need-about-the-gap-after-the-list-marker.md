@@ -116,22 +116,20 @@ content 屬性更強大。例如，它允許我們使用 counter() 函數來訪�
 任何 Unicode 字符都有潛在的可能用作自定義清單標記，但實際上只有一小部分字符的官方名稱中實際上包含“Bullet”一詞，因此我想在這裡為參考編譯它們。  
        
       
-｜ Character ｜Name   ｜ Code ｜ point｜ CSS keyword｜
-｜-----------｜ ------｜------｜------｜------------｜
-｜•          ｜Bullet ｜U+2022｜      ｜        disc｜
-｜‣          ｜Triangular Bullet｜U+2023｜｜        ｜
-｜⁃          ｜Hyphen Bullet｜U+2043 ｜｜           ｜
-｜⁌          ｜Black Leftwards Bullet｜U+204C｜｜   ｜	
-｜⁍          ｜Black Rightwards Bullet｜U+204D｜｜	 ｜
-｜◘          ｜Inverse Bullet｜U+25D8｜｜           ｜
-｜◦          ｜White Bullet｜U+25E6｜  ｜     circle｜
-｜☙          ｜Reversed Rotated Floral 
-                          Heart Bullet｜U+2619｜｜   ｜
-｜❥          ｜Rotated Heavy Black Heart
-                                Bullet｜U+2765｜｜   ｜
-｜❧          ｜Rotated Floral Heart Bullet｜U+2767｜｜｜
-｜⦾          ｜Circled White Bullet｜U+29BE｜｜      ｜	
-｜⦿          ｜Circled Bullet｜U+29BF｜｜           ｜
+｜ Character  ｜Name                                ｜ Code   ｜ point  ｜ CSS keyword ｜
+｜:-----------｜ :------:                           ｜:------:｜:------:｜------------:｜
+｜•           ｜Bullet                              ｜U+2022  ｜        ｜        disc ｜
+｜‣           ｜Triangular Bullet                   ｜U+2023  ｜        ｜             ｜
+｜⁃           ｜Hyphen Bullet                       ｜U+2043  ｜        ｜             ｜
+｜⁌           ｜Black Leftwards Bullet              ｜U+204C  ｜        ｜             ｜	
+｜⁍           ｜Black Rightwards Bullet             ｜U+204D  ｜        ｜	            ｜
+｜◘           ｜Inverse Bullet                      ｜U+25D8  ｜        ｜             ｜
+｜◦           ｜White Bullet                        ｜U+25E6  ｜        ｜     circle  ｜
+｜☙           ｜Reversed Rotated Floral Heart Bullet｜U+2619  ｜        ｜             ｜
+｜❥           ｜Rotated Heavy Black Heart Bullet    ｜U+2765  ｜        ｜             ｜
+｜❧           ｜Rotated Floral Heart Bullet         ｜U+2767  ｜        ｜             ｜
+｜⦾           ｜Circled White Bullet                ｜U+29BE  ｜        ｜             ｜	
+｜⦿           ｜Circled Bullet                      ｜U+29BF  ｜        ｜             ｜
   
     
 現在讓我們看看將默認的清單標記替換為 list-style-type: "•"（U+2022 Bullet）時會發生什麼情況。這個字符與默認的圓點字符相同，所以不應該有任何主要的渲染差異。在我的測試頁面上，啟用 list-style-type 選項並觀察標記的任何變化。
