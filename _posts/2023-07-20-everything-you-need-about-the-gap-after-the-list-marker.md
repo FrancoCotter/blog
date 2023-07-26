@@ -8,8 +8,8 @@ author:     "Mariano"
 header-img: "img/list-marker-gap.png"
 tags:  
 
-   - 翻译
-   - List 列表
+   - 翻譯
+   - List
    - Marker
    - CSS
   
