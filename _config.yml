@@ -3,8 +3,8 @@ title: Mariano
 SEOTitle: Mariano| 博客 
 header-img: img/home-bg.jpg
 email: chockyeizo@hotmail.com
-description: "关于前端，关于吐槽，关于二次元 | 赛亚！"
-keyword: "前端、吐槽、二次元、设计、科技、技术、ココロ、初音未来粉丝、喜欢世界第一的公主殿下"
+description: "This is a personal blog that encompasses front-end and back-end development, technology, music, movies, and more.（这是一个个人博客，包含了前端、后端、技术、音乐、电影等等）"
+keyword: "前端、吐槽、设计、技术、音乐、电影"
 #url: "http://huangxuan.me"
 #url:""
 baseurl: "/blog"
@@ -53,7 +53,7 @@ kramdown:
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "写写代码，看看动画和电影，听听音乐，感受世界"
+sidebar-about-description: "Joy of coding, immerse yourself in the world of movies, listen to the rhythms of music, and experience the wonders of the world."
 sidebar-avatar: /blog/img/avatar.jpg  # use absolute URL.
 
 
