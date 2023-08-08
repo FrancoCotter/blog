@@ -8,9 +8,9 @@ author:     "Mariano"
 header-img: "img/aigc-banner.png"
 tags:  
 
-   - 生成式人工智能
-   - AIGC
-   - 感悟
+   - 
+   - 
+   - 
   
 ---    
   
