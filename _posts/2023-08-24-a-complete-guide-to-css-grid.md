@@ -13,8 +13,7 @@ tags:
   
 ---      
   
----  
- 原文请阅读[A Complete Guide to CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid-template-columnsgrid-template-rows)  
+原文请阅读[A Complete Guide to CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid-template-columnsgrid-template-rows)  
    
 #### CSS 网格的综合指南，重点关注网格父容器和网格子元素的设置。  
   
