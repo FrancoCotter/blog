@@ -3,7 +3,7 @@
 layout:  post
 title:   "完整的 CSS Grid 指南"
 subtitle:   ""
-date:       2023-08-24 18:50:00
+date:       "2023-08-24 18:50:00"
 author:     "Mariano"
 header-img: "img/CSS-GRID-3.png"
 tags:  
@@ -12,7 +12,7 @@ tags:
    - 界面设计
   
 ---      
-  
+
     
 
 原文请阅读[A Complete Guide to CSS Grid](https://css-tricks.com/snippets/css/complete-guide-grid/#aa-grid-template-columnsgrid-template-rows)  
