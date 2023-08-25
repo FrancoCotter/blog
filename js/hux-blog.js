@@ -36,7 +36,6 @@ $(document).ready(function () {
 $(document).ready(function(){
     // hide #back-top first
     $('.returnTop').hide();
-
     // fade in #back-top
     $(function () {
         $(window).scroll(function () {
