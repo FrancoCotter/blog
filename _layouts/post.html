@@ -141,6 +141,41 @@ layout: default
             </div>
         </div>
     </div>
+    <div class="returnTop">
+        <a href="javascript:;">
+            <img src="{{site.baseurl}}/img/Arrow_top_svg.svg">
+        </a>
+    </div>
+    <style type="text/css">
+        .returnTop{position: fixed;bottom: 30px;right:20px;width:30px;height:30px;z-index:99}
+        .returnTop a,.returnTop img{display:inline-block;width:100%;height:100%;}
+        .returnTop img{object-fit: cover;}
+    </style>
+    <script>
+        $(document).ready(function(){
+                // hide #back-top first
+                $('.returnTop').hide();
+
+                // fade in #back-top
+                $(function () {
+                    $(window).scroll(function () {
+                        if ($(this).scrollTop() > 100) {
+                            $('.returnTop').fadeIn();
+                        } else {
+                            $('.returnTop').fadeOut();
+                        }
+                    });
+                    // scroll body to 0px on click
+                    $('.returnTop a').click(function () {
+                        $('body,html').animate({
+                            scrollTop: 0
+                        }, 800);
+                        return false;
+                    });
+                });
+        });
+
+    </script>
 </article>
 
 <!--{% if site.duoshuo_username %}
