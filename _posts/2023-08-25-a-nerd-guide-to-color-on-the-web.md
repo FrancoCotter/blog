@@ -31,6 +31,6 @@ tags:
     <style>
        .p{display: flex;justify-content: space-between; width: 100%;}.p5{width: 50%;}.p5 img{width: 100%;display: block;}
     </style>
-</p> 
+</div> 
 
 
