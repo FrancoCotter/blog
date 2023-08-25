@@ -29,7 +29,7 @@ tags:
         <img src="{{site.baseurl}}/img/color-mixing.jpg">
     </div>
     <style>
-       .p{display: flex;justify-content: space-between; width: 100%;}.p5{width: 50%;}.p5 img{width: 100%;display: block;}
+       .p{display: flex;justify-content: space-between; width: 100%;align-items: baseline;}.p5{width: 50%;}.p5 img{width: 100%;display: block;}
     </style>
 </div> 
 
