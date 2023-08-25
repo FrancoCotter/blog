@@ -33,7 +33,28 @@ $(document).ready(function () {
     $('iframe[src*="vimeo.com"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
 	$('iframe[src*="vimeo.com"]').addClass('embed-responsive-item');
 });
+$(document).ready(function(){
+    // hide #back-top first
+    $('.returnTop').hide();
 
+    // fade in #back-top
+    $(function () {
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('.returnTop').fadeIn();
+            } else {
+                $('.returnTop').fadeOut();
+            }
+        });
+        // scroll body to 0px on click
+        $('.returnTop a').click(function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 800);
+            return false;
+        });
+    });
+});
 // Navigation Scripts to Show Header on Scroll-Up
 jQuery(document).ready(function($) {
     var MQL = 1170;
