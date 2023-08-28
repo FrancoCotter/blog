@@ -181,14 +181,82 @@ adjust-hue($color, $degrees)
 lighten($color, $amount)
 darken($color, $amount)
 saturate($color, $amount)
-```  
+```    
+  
+
+确实，使用预处理器可以以编程方式混合和修改颜色的方法有数十种，我们不会深入讨论所有方法，但是以下是一个很好的[互动资源](http://jackiebalzer.com/color)，可以提供更详细的信息。  
+  
+# 颜色属性（Color Properties）    
+  
+在CSS中，颜色属性可以用于设置字体颜色。如果您要设置一个大区域的颜色，应该使用background-color属性，除非是SVG元素，这时您应该使用fill属性。边框可以使用border属性来设置HTML元素的边框，而SVG元素则使用stroke属性。  
+  
+
+  
+# 盒子阴影和文本阴影（Box and Text Shadows）  
+  
+
+ box-shadow和text-shadow属性可以接受颜色值。文本阴影可以接受2-3个值，即水平阴影（h-shadow）、垂直阴影（v-shadow）和可选的模糊半径。盒子阴影可以接受2-4个值，包括水平阴影、垂直阴影、可选的模糊距离和可选的扩展距离。您还可以在开始时使用"inset"关键字来创建倒置的阴影效果。这个[网站](http://www.cssmatic.com/box-shadow)提供了一个很好的演示，其中包含易于复制粘贴的代码。   
+   
+
+ # 渐变（Gradients）  
+
+ 
+线性渐变通过指定方向来实现，可以选择从上到下、从下到上、从左到右、从右到左、指定角度或径向渐变。在渐变中，我们可以指定不同颜色的停止点，并在每个停止点处定义所需的颜色。这些颜色停止点也可以包含透明度。  
+  
+
+事例：  
+  
+<p class="codepen" data-height="300" data-theme-id="light" data-default-tab="result" data-slug-hash="gOZPRJG" data-user="Mariano_M" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>  
   
 
  
+大多数渐变的语法并不难编写，但我非常喜欢使用[在线渐变生成器](https://www.colorzilla.com/gradient-editor/)，~~因为它还会为了支持IE6-9而创建复杂的filter属性~~。这里[还有一个非常漂亮的UI渐变生成器](https://uigradients.com/#Combi)。这个生成器非常酷，而且是开源的，你可以为其做出贡献。    
   
 
+在SVG中创建渐变也同样简单。我们可以定义一个带有id的块，并在其中引用。我们还可以选择性地定义渐变的表面区域。  
+  
+```html
+<linearGradient id="Gradient">
+  <stop id="stop1" offset="0" stop-color="white" stop-opacity="0" />
+  <stop id="stop2" offset="0.3" stop-color="black" stop-opacity="1" />
+</linearGradient>
+```  
+  
+这些渐变也支持不透明度，所以我们可以实现一些很好的效果，例如将它们作为遮罩进行动画处理，以及图层效果。  
+  
+<p class="codepen" data-height="300" data-theme-id="light" data-default-tab="result" data-slug-hash="YzdwQmZ" data-user="Mariano_M" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>  
   
 
+在WebKit浏览器中，也可以实现渐变文本效果，我们在[CSS-Tricks网站](https://css-tricks.com/snippets/css/gradient-text/)上有一个非常好的代码片段可以使用。  
+  
+
+# 生成色彩（Generative Color）    
+  
+
+有一些很酷的方法可以一次性生成许多令人惊叹的色彩。当用代码创建生成艺术或UI元素时，我发现这些方法非常有趣。
+
+只要保持在上一节指定的范围内，你可以在Sass（或任何CSS预处理器）或JavaScript中使用for循环，或者使用Math.Random()和Math.floor()来获取颜色值。我们需要使用Math.floor()或Math.ceil()，因为如果我们不返回整数，就会出错，无法得到一个有效的颜色值。
+
+一个好的经验法则是不要同时更新所有三个值。我发现，在一个值范围内有较大的偏差，第二个值范围内有较小的偏差，而第三个值则没有偏差，效果很好。例如，使用hsl色彩模型非常方便，因为你知道从0到360循环遍历色调将给你一个完整的范围。而hue-rotate属性的角度是一个完整的圆，所以你不必局限于0到360的范围，甚至可以尝试使用-480或600等值，浏览器仍然可以解析。  
+  
+```scss
+@mixin colors($max, $color-frequency) {
+  $color: 300/$max;
+  
+  @for $i from 1 through $max {
+    .s#{$i} {
+      border: 1px solid hsl(($i - 10)*($color*1.25), ($i - 1)*($color / $color-frequency), 40%);
+     }
+  }
+} 
+.demo {
+  @include colors(20,2);
+}
+```
 
   
 
