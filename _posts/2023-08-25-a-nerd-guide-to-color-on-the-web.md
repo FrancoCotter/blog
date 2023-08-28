@@ -256,12 +256,28 @@ saturate($color, $amount)
 .demo {
   @include colors(20,2);
 }
-```
-
+```  
+  
+在这个演示中，我使用这些方法来制作水果圈颜色。  
+  
+<p class="codepen" data-height="300" data-theme-id="light" data-default-tab="result" data-slug-hash="wvRMqvX" data-user="Mariano_M" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>  
   
 
+同样地，还有这个，使用不同的范围（在列表中快速滚动）  
+  
+<p class="codepen" data-height="300" data-theme-id="light" data-default-tab="result" data-slug-hash="abPdyzv" data-user="Mariano_M" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
- 
+
+
+在下面的代码中，我借助Math.random()函数，将其应用于RGB值中，以在相同的范围内生成丰富多彩的颜色。这个演示是基于React的三维虚拟现实体验。如果我使用for循环，也能达到相同的效果，但我选择随机化颜色以反映运动的感觉。这个项目的创意无限。  
+
+[![]({{site.baseurl}}/img/three2.png)](https://sdras.github.io/react-aframe-demo1/)  
+  
+
   
 
 
