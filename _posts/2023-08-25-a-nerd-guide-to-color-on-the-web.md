@@ -281,28 +281,29 @@ saturate($color, $amount)
 
 # JavaScript  
 
-```js
-    class App extends React.Component {
-    render () {
-    const items = [],
-    amt1 = 5,
-    amt2 = 7;
-    for (let i = 0; i < 30; i++) {
-    let rando = Math.floor(Math.random() * (amt2 - 0 + 1)) + 0,
-    addColor1 = parseInt(rando * i),
-    addColor2 = 255 - parseInt(7 * i),
-    updateColor = `rgb(200, ${addColor1}, ${addColor2})`;
-    items.push(
-    // ...
-    );
-    }
-    return (
-    // ...
-    {items}
-
-    );
-    }
-    }
+```javascript
+            class App extends React.Component {
+            render () {
+                const items = [],
+                    amt1 = 5,
+                    amt2 = 7;
+                for (let i = 0; i < 30; i++) {
+                let rando = Math.floor(Math.random() * (amt2 - 0 + 1)) + 0,
+                    addColor1 = parseInt(rando * i),
+                    addColor2 = 255 - parseInt(7 * i),
+                    updateColor = `rgb(200, ${addColor1}, ${addColor2})`;
+                items.push(
+                    // ...
+                    );
+                }
+                return (
+                
+                // ...
+                {items}
+                
+                );
+            }
+            }
 ```  
 
   
