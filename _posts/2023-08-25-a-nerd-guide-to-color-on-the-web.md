@@ -127,30 +127,35 @@ body {
 
 但在撰写本文时，这些变量在微软浏览器中尚未得到广泛应用。
 
-CSS预处理器也支持变量，因此您可以设置变量，例如$brandPrimary，并在代码库中使用它们。或者使用一个映射：  
+CSS预处理器也支持变量，因此您可以设置变量，例如$brandPrimary，并在代码库中使用它们。或者使用一个映射：    
   
-```css
-$colors: (
-  mainBrand: #FA6ACC,secondaryBrand: #F02A52,highlight: #09A6E4
+```scss 
+
+$colors:(
+    mainBrand:#FA6ACC,secondaryBrand:#F02A52,highlight:#09A6E5
 );
-
-@function color($key) {
-  @if map-has-key($colors, $key) {
-    @return map-get($colors, $key);
-  }
-  @warn "Unknown `#{$key}` in $colors.";
-  @return null;
+@function color($key){
+    @if map-has-key($colors,$key){
+        @return map-get($colors,$key);
+    }
+    @warn "Unknow `#{$key}` in $colors.";
+    @return null;
+}
+// _component.scss
+.element{
+    background-color:color(hightlight); // #09A6E4
 }
 
-/* _component.scss */
-.element {
-  background-color: color(highlight); /*#09A6E4*/
-}
 
-```  
+```   
+
+请记住，在这里命名非常重要。抽象的命名有时很有用，这样，如果您将表示蓝色的变量更改为橙色，您就不必逐个重命名所有的颜色值。更糟糕的是，不要放出一个标志说“$blue现在是橙色。”（哀伤的长号声）   
+
+   
+# 当前颜色关键字（currentColor）    
   
 
-请记住，在这里命名非常重要。抽象的命名有时很有用，这样，如果您将表示蓝色的变量更改为橙色，您就不必逐个重命名所有的颜色值。更糟糕的是，不要放出一个标志说“$blue现在是橙色。”（哀伤的长号声）  
+
   
 
 
