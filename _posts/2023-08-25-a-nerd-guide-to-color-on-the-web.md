@@ -281,29 +281,29 @@ saturate($color, $amount)
 
 # JavaScript  
 
-```javascript
-            class App extends React.Component {
-            render () {
-                const items = [],
-                    amt1 = 5,
-                    amt2 = 7;
-                for (let i = 0; i < 30; i++) {
-                let rando = Math.floor(Math.random() * (amt2 - 0 + 1)) + 0,
-                    addColor1 = parseInt(rando * i),
-                    addColor2 = 255 - parseInt(7 * i),
-                    updateColor = `rgb(200, ${addColor1}, ${addColor2})`;
-                items.push(
-                    // ...
-                    );
-                }
-                return (
-                
-                // ...
-                {items}
-                
-                );
-            }
-            }
+```
+    class App extends React.Component {
+    render () {
+        const items = [],
+            amt1 = 5,
+            amt2 = 7;
+        for (let i = 0; i < 30; i++) {
+        let rando = Math.floor(Math.random() * (amt2 - 0 + 1)) + 0,
+            addColor1 = parseInt(rando * i),
+            addColor2 = 255 - parseInt(7 * i),
+            updateColor = `rgb(200, ${addColor1}, ${addColor2})`;
+        items.push(
+            // ...
+            );
+        }
+        return (
+        
+        // ...
+        {items}
+        
+        );
+    }
+    }
 ```    
   
 
@@ -313,7 +313,7 @@ saturate($color, $amount)
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>  
   
-```javascript
+```
 TweenMax.to(".turtle2 path, .turtle2 circle, .turtle2 ellipse", 1.5, {fill:"hsl(+=0, +=50%, +=0%)"});
 ```  
   
@@ -360,7 +360,24 @@ CSS滤镜提供了许多酷炫的颜色效果，还可以将彩色图像转为�
   </filter>
 
   <path filter="url(#imInTheMatrix)"  … />
+```    
+  
+我们还可以扩展这个矩阵并调整这些值的色调、饱和度等：  
+  
+```html
+<filter id="imInTheHueMatrix">
+  <feColorMatrix in="SourceGraphic"
+    type="hueRotate"
+    values="150" />
+</filter>
 ```  
+
+Una的文章深入探讨了这里的所有功能，但你可以通过Amelia Belamy-Royd的O'Reilly图书《SVG Colors, Patterns & Gradients》或Mike Mullany的探索性演示来获取更多关于这个和其他疯狂的SVG颜色和渐变工具的信息。  
+
+![]({{site.baseurl}}/img/context-color.jpg)    
+  
+
+
 
   
 
