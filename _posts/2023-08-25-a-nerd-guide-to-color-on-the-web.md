@@ -157,8 +157,8 @@ currentColor是一个非常有用的值。它遵循层叠规则，并且对于�
 假设您创建了一个div，然后在其中创建了另一个div。下面的代码将为内部div创建橙色边框：  
   
 ```scss
-.div-external { color: orange; }
-.div-internal { border: 1px solid currentColor; }
+.div-external{color:orange;}
+.div-internal{border:1px solid currentColor;}
 ```  
   
 这对于图标系统非常有用，无论是SVG图标还是图标字体。您可以将currentColor设置为填充（fill）、描边（stroke）或颜色（color）的默认值，然后使用语义化适当的CSS类来样式化。   
@@ -244,18 +244,17 @@ saturate($color, $amount)
 一个好的经验法则是不要同时更新所有三个值。我发现，在一个值范围内有较大的偏差，第二个值范围内有较小的偏差，而第三个值则没有偏差，效果很好。例如，使用hsl色彩模型非常方便，因为你知道从0到360循环遍历色调将给你一个完整的范围。而hue-rotate属性的角度是一个完整的圆，所以你不必局限于0到360的范围，甚至可以尝试使用-480或600等值，浏览器仍然可以解析。  
   
 ```scss
-@mixin colors($max, $color-frequency) {
-  $color: 300/$max;
-  
-  @for $i from 1 through $max {
-    .s#{$i} {
-      border: 1px solid hsl(($i - 10)*($color*1.25), ($i - 1)*($color / $color-frequency), 40%);
-     }
-  }
-} 
-.demo {
-  @include colors(20,2);
-}
+    @mixin colors($max,$color-frequency){
+    $color:300/$max;
+    @for $i from 1 through $max{
+        .s#{$i}{
+            border: 1px solid hsl(($i-10)*($color*1.25),($i-1)*($color/$color-frequency),40%);
+            }
+        }
+    } 
+    .demo{
+    @include colors(20,2);
+    }
 ```  
   
 在这个演示中，我使用这些方法来制作水果圈颜色。  
