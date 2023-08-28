@@ -103,7 +103,62 @@ Example: hsla(150, 50%, 50%, 0.5);
 **几年前，Chris还开发了一个很棒的工具，名为"hsla explorer"，你可以在[这里查看](https://css-tricks.com/examples/HSLaExplorer/)。**
   
 
+如果你对处理颜色没什么特别的技巧，hsla()提供了一些相当简单的规则，可以为开发者创建出漂亮的效果。在下面的生成色彩部分，我们将更详细地介绍这个。  
   
+# 命名颜色（Named Colors）  
+  
+作为开发人员，我们也可以使用命名颜色。然而，命名颜色因其不准确性而被认为难以处理。最著名且“出名”的例子是，深灰实际上比灰色更浅，而青柠和青柠绿是完全不同的颜色。甚至有一个由Chris Heilmann制作的网页游戏，你可以在其中尝试猜测命名颜色。在过去，chucknorris被定义为一种血红色（就我所知，现在只在HTML中支持），但这是我最喜欢的颜色之一。命名颜色可以用于快速演示颜色的使用，但通常开发人员使用Sass或其他预处理器将颜色值存储为十六进制、RGBA或HSLA，并将它们映射到公司内部使用的颜色名称。  
+  
+# 颜色变量（Color Variable）    
+
+一个好的做法是将颜色变量存储起来，而不直接使用它们，而是将它们映射到具有更语义化命名方案的其他变量中。CSS具有原生变量，例如：  
+  
+```css
+:root {
+  --brandColor: red;
+}
+
+body {
+  background: var(--brandColor);
+} 
+```  
+  
+
+但在撰写本文时，这些变量在微软浏览器中尚未得到广泛应用。
+
+CSS预处理器也支持变量，因此您可以设置变量，例如$brandPrimary，并在代码库中使用它们。或者使用一个映射：  
+  
+```css
+$colors: (
+  mainBrand: #FA6ACC,
+  secondaryBrand: #F02A52,
+  highlight: #09A6E4
+);
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+// _component.scss
+.element {
+  background-color: color(highlight); // #09A6E4
+}
+
+```  
+  
+
+请记住，在这里命名非常重要。抽象的命名有时很有用，这样，如果您将表示蓝色的变量更改为橙色，您就不必逐个重命名所有的颜色值。更糟糕的是，不要放出一个标志说“$blue现在是橙色。”（哀伤的长号声）  
+  
+
+
+ 
+  
+
 
 
 
