@@ -304,7 +304,68 @@ saturate($color, $amount)
                 );
             }
             }
+```    
+  
+
+[GreenSock](http://greensock.com/){:target="_blank"}发布了一个工具，可以让你对相对颜色值进行动画处理，这非常有用，因为它意味着你可以一次性获取多个元素，并相对于它们当前的颜色坐标进行动画处理。以下是一些演示这个概念的海龟图片：  
+  
+<p class="codepen" data-height="300" data-theme-id="light" data-default-tab="result" data-slug-hash="ExGPvEN" data-user="Mariano_M" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>  
+  
+```javascript
+TweenMax.to(".turtle2 path, .turtle2 circle, .turtle2 ellipse", 1.5, {fill:"hsl(+=0, +=50%, +=0%)"});
 ```  
+  
+# 其他美观的颜色效果  
+  
+## 混合模式和背景混合模式（Mix Blend Modes and Background Blend Modes）  
+
+ 
+如果您曾经在Photoshop中使用过图层效果，那么您可能对混合模式非常熟悉。在90年代，几乎每个网站都使用了这些混合模式~~包括我的，有点害羞）~~。混合模式和背景混合模式可以将两个不同的图层图像合成在一起，共有16种可用的模式。每一种模式都通过一些简单的数学公式，将顶部的图像或颜色（称为源）与底部的图层（称为目标）混合在一起，而混合效果则发生在两者之间的区域，也被称为背景。  
+
+![]({{site.baseurl}}/img/mixblend.jpg)   
+  
+
+如果你愿意和我一起纵情于学术的深渊，让我们一同探索混合模式的奇妙之处吧。在这个世界里，混合模式的颜色公式取决于所使用的效果类型。例如，乘法模式是目标乘以源等于背景。其他效果则是使用减法、乘法、加法和除法等简单数学运算的变体。线性模式是A加B减1，而颜色加深模式是1减（1减B）除以A。然而，实际上你并不需要了解这些公式就能使用它们。  
+
+这里有[更详尽的文档](https://css-tricks.com/almanac/properties/m/mix-blend-mode/){:target="_blank"}，并附有一个简单的演示，以说明  
+    
+<p class="codepen" data-height="300" data-theme-id="light" data-default-tab="result" data-slug-hash="jOXWLKg" data-user="Mariano_M" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+</p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>    
+  
+
+这篇由Robin撰写的精彩文章展示了通过叠加多种混合模式可以实现的复杂而令人印象深刻的效果。接下来，我们将介绍如何将它们与滤镜混合使用。如今，在浏览器中，你真的可以做很多事情。  
+  
+
+### 滤镜   
+
+CSS滤镜提供了许多酷炫的颜色效果，还可以将彩色图像转为灰度图像。在CSS-Tricks网站上，我们有一份[很好的资源](https://css-tricks.com/almanac/properties/f/filter/){:target="_blank"}介绍了滤镜的工作原理，而且现在大多数浏览器都支持这个功能。如果你想要探索一下，[Bennett Feely](https://bennettfeely.com/filters-gallery/){:target="_blank"}还有一个很棒的滤镜库。
+
+滤镜和模糊模式可以结合使用！Una Kravets创建了一个很酷的工具叫做CSS Gram，结合了一些效果来创建典型的Instagram滤镜。她在底部提供了一些很好的文档。
+
+### feColorMatrix  
+
+[Una还有一篇文章](http://alistapart.com/article/finessing-fecolormatrix){:target="_blank"}，探讨了使用feColorMatrix创建这些图像的方法。feColorMatrix是SVG中的一个滤镜原语，也可以应用于HTML元素。它非常强大，可以让你对颜色进行精细调整。顾名思义，feColorMatrix的基本标记使用了一个值矩阵，并通过它的相对id应用它。  
+
+```html
+<filter id="imInTheMatrix">
+    <feColorMatrix in="SourceGraphic"
+      type="matrix"
+      values="0 0 0 0 0
+              1 1 1 1 0
+              0 0 0 0 0
+              0 0 0 1 0" />
+  </filter>
+
+  <path filter="url(#imInTheMatrix)"  … />
+```  
+
+  
+
+  
+
 
   
 
