@@ -243,7 +243,7 @@ saturate($color, $amount)
 
 一个好的经验法则是不要同时更新所有三个值。我发现，在一个值范围内有较大的偏差，第二个值范围内有较小的偏差，而第三个值则没有偏差，效果很好。例如，使用hsl色彩模型非常方便，因为你知道从0到360循环遍历色调将给你一个完整的范围。而hue-rotate属性的角度是一个完整的圆，所以你不必局限于0到360的范围，甚至可以尝试使用-480或600等值，浏览器仍然可以解析。  
   
-```scss
+```less
     @mixin colors($max,$color-frequency){
     $color:300/$max;
     @for $i from 1 through $max{
@@ -281,7 +281,7 @@ saturate($color, $amount)
 
 # JavaScript  
 
-```javascript
+```js
 class App extends React.Component {
   render () {
     const items = [],
@@ -297,7 +297,6 @@ class App extends React.Component {
         );
     }
     return (
-      
        // ...
        {items}
       
