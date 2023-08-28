@@ -100,7 +100,7 @@ Example: hsla(150, 50%, 50%, 0.5);
   
 ![]({{site.baseurl}}/img/hsla.gif)  
   
-**几年前，Chris还开发了一个很棒的工具，名为"hsla explorer"，你可以在[这里查看](https://css-tricks.com/examples/HSLaExplorer/){:target="_blank"} 。**
+<p align="center"><b>几年前，Chris还开发了一个很棒的工具，名为"hsla explorer"，你可以在[这里查看](https://css-tricks.com/examples/HSLaExplorer/){:target="_blank"} 。</b></p>
   
 
 如果你对处理颜色没什么特别的技巧，hsla()提供了一些相当简单的规则，可以为开发者创建出漂亮的效果。在下面的生成色彩部分，我们将更详细地介绍这个。  
