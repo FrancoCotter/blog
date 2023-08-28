@@ -114,13 +114,14 @@ Example: hsla(150, 50%, 50%, 0.5);
 一个好的做法是将颜色变量存储起来，而不直接使用它们，而是将它们映射到具有更语义化命名方案的其他变量中。CSS具有原生变量，例如：  
   
 ```css
+
 :root {
   --brandColor: red;
 }
-
 body {
   background: var(--brandColor);
 } 
+
 ```  
   
 
@@ -130,23 +131,20 @@ CSS预处理器也支持变量，因此您可以设置变量，例如$brandPrima
   
 ```css
 $colors: (
-  mainBrand: #FA6ACC,
-  secondaryBrand: #F02A52,
-  highlight: #09A6E4
+  mainBrand: #FA6ACC,secondaryBrand: #F02A52,highlight: #09A6E4
 );
 
 @function color($key) {
   @if map-has-key($colors, $key) {
     @return map-get($colors, $key);
   }
-
   @warn "Unknown `#{$key}` in $colors.";
   @return null;
 }
 
-// _component.scss
+/* _component.scss */
 .element {
-  background-color: color(highlight); // #09A6E4
+  background-color: color(highlight); /*#09A6E4*/
 }
 
 ```  
