@@ -156,7 +156,7 @@ currentColor是一个非常有用的值。它遵循层叠规则，并且对于�
 
 假设您创建了一个div，然后在其中创建了另一个div。下面的代码将为内部div创建橙色边框：  
   
-```css
+```scss
 .div-external { color: orange; }
 .div-internal { border: 1px solid currentColor; }
 ```  
