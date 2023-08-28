@@ -152,7 +152,7 @@ currentColor是一个非常有用的值。它遵循层叠规则，并且对于�
 
 假设您创建了一个div，然后在其中创建了另一个div。下面的代码将为内部div创建橙色边框：  
   
-```css
+```scss
 .div-external{color:orange;}
 .div-internal{border:1px solid currentColor;}
 ```  
@@ -198,7 +198,7 @@ saturate($color, $amount)
 
 事例：  
   
-<p class="codepen" data-height="300" data-theme-id="light" data-default-tab="result" data-slug-hash="gOZPRJG" data-user="Mariano_M" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<p class="codepen" data-height="600" data-theme-id="light" data-default-tab="result" data-slug-hash="gOZPRJG" data-user="Mariano_M" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>  
    
@@ -216,7 +216,7 @@ saturate($color, $amount)
   
 这些渐变也支持不透明度，所以我们可以实现一些很好的效果，例如将它们作为遮罩进行动画处理，以及图层效果。  
   
-<p class="codepen" data-height="300" data-theme-id="light" data-default-tab="result" data-slug-hash="YzdwQmZ" data-user="Mariano_M" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<p class="codepen" data-height="600" data-theme-id="light" data-default-tab="result" data-slug-hash="YzdwQmZ" data-user="Mariano_M" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>  
   
@@ -231,7 +231,7 @@ saturate($color, $amount)
 
 一个好的经验法则是不要同时更新所有三个值。我发现，在一个值范围内有较大的偏差，第二个值范围内有较小的偏差，而第三个值则没有偏差，效果很好。例如，使用hsl色彩模型非常方便，因为你知道从0到360循环遍历色调将给你一个完整的范围。而hue-rotate属性的角度是一个完整的圆，所以你不必局限于0到360的范围，甚至可以尝试使用-480或600等值，浏览器仍然可以解析。  
   
-```scss
+```less
 @mixin colors($max,$color-frequency){
    $color:300/$max;
       @for $i from 1 through $max{
@@ -247,14 +247,14 @@ saturate($color, $amount)
   
 在这个演示中，我使用这些方法来制作水果圈颜色。  
   
-<p class="codepen" data-height="300" data-theme-id="light" data-default-tab="result" data-slug-hash="wvRMqvX" data-user="Mariano_M" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<p class="codepen" data-height="600" data-theme-id="light" data-default-tab="result" data-slug-hash="wvRMqvX" data-user="Mariano_M" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>  
   
 
 同样地，还有这个，使用不同的范围（在列表中快速滚动）  
   
-<p class="codepen" data-height="300" data-theme-id="light" data-default-tab="result" data-slug-hash="abPdyzv" data-user="Mariano_M" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<p class="codepen" data-height="600" data-theme-id="light" data-default-tab="result" data-slug-hash="abPdyzv" data-user="Mariano_M" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
@@ -268,7 +268,7 @@ saturate($color, $amount)
   
 
 # JavaScript  
-```js
+```
    class App extends React.Component{
       render(){   
          const items = [],
@@ -289,7 +289,7 @@ saturate($color, $amount)
 
 [GreenSock](http://greensock.com/){:target="_blank"}发布了一个工具，可以让你对相对颜色值进行动画处理，这非常有用，因为它意味着你可以一次性获取多个元素，并相对于它们当前的颜色坐标进行动画处理。以下是一些演示这个概念的海龟图片：  
   
-<p class="codepen" data-height="300" data-theme-id="light" data-default-tab="result" data-slug-hash="ExGPvEN" data-user="Mariano_M" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<p class="codepen" data-height="600" data-theme-id="light" data-default-tab="result" data-slug-hash="ExGPvEN" data-user="Mariano_M" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>  
   
@@ -311,7 +311,7 @@ TweenMax.to(".turtle2 path, .turtle2 circle, .turtle2 ellipse", 1.5, {fill:"hsl(
 
 这里有[更详尽的文档](https://css-tricks.com/almanac/properties/m/mix-blend-mode/){:target="_blank"}，并附有一个简单的演示，以说明  
     
-<p class="codepen" data-height="300" data-theme-id="light" data-default-tab="result" data-slug-hash="jOXWLKg" data-user="Mariano_M" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<p class="codepen" data-height="600" data-theme-id="light" data-default-tab="result" data-slug-hash="jOXWLKg" data-user="Mariano_M" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>    
   
