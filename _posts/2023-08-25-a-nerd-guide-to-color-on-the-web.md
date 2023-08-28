@@ -113,38 +113,34 @@ Example: hsla(150, 50%, 50%, 0.5);
 
 一个好的做法是将颜色变量存储起来，而不直接使用它们，而是将它们映射到具有更语义化命名方案的其他变量中。CSS具有原生变量，例如：  
   
-```less
-
-:root {
-  --brandColor: red;
-}
-body {
-  background: var(--brandColor);
-} 
-
+```scss
+        :root {
+            --brandColor: red;
+        }
+        body {
+            background: var(--brandColor);
+        } 
 ```  
   
 但在撰写本文时，这些变量在微软浏览器中尚未得到广泛应用。
 
 CSS预处理器也支持变量，因此您可以设置变量，例如$brandPrimary，并在代码库中使用它们。或者使用一个映射：    
   
-``` less
-
-$colors:(
-    mainBrand:#FA6ACC,secondaryBrand:#F02A52,highlight:#09A6E5
-);
-@function color($key){
-    @if map-has-key($colors,$key){
-        @return map-get($colors,$key);
-    }
-    @warn "Unknow `#{$key}` in $colors.";
-    @return null;
-}
-// _component.scss
-.element{
-    background-color:color(hightlight); // #09A6E4
-}
-
+``` scss
+        $colors:(
+            mainBrand:#FA6ACC,secondaryBrand:#F02A52,highlight:#09A6E5
+        );
+        @function color($key){
+            @if map-has-key($colors,$key){
+                @return map-get($colors,$key);
+            }
+            @warn "Unknow `#{$key}` in $colors.";
+            @return null;
+        }
+        // _component.scss
+        .element{
+            background-color:color(hightlight); // #09A6E4
+        }
 ```   
 
 请记住，在这里命名非常重要。抽象的命名有时很有用，这样，如果您将表示蓝色的变量更改为橙色，您就不必逐个重命名所有的颜色值。更糟糕的是，不要放出一个标志说“$blue现在是橙色。”（哀伤的长号声）   
@@ -157,8 +153,8 @@ currentColor是一个非常有用的值。它遵循层叠规则，并且对于�
 假设您创建了一个div，然后在其中创建了另一个div。下面的代码将为内部div创建橙色边框：  
   
 ```scss
-.div-external{color:orange;}
-.div-internal{border:1px solid currentColor;}
+    .div-external{color:orange;}
+    .div-internal{border:1px solid currentColor;}
 ```  
   
 这对于图标系统非常有用，无论是SVG图标还是图标字体。您可以将currentColor设置为填充（fill）、描边（stroke）或颜色（color）的默认值，然后使用语义化适当的CSS类来样式化。   
@@ -176,11 +172,11 @@ CSS预处理器非常适用于调整颜色。以下是一些不同预处理器�
 以下是我们可以使用Sass进行的一些酷炫操作：  
   
 ```scss
-mix($color1, $color2, [$weight])
-adjust-hue($color, $degrees)
-lighten($color, $amount)
-darken($color, $amount)
-saturate($color, $amount)
+    mix($color1, $color2, [$weight])
+    adjust-hue($color, $degrees)
+    lighten($color, $amount)
+    darken($color, $amount)
+    saturate($color, $amount)
 ```    
   
 
@@ -301,7 +297,7 @@ saturate($color, $amount)
         {items}
         
         );
-    }
+        }
     }
 ```  
 
