@@ -11,7 +11,7 @@ tags:
    - 色彩
    - UI/UX
 ---      
-原文请阅读：[A Nerd’s Guide to Color on the Web](https://css-tricks.com/nerds-guide-color-web/)  
+原文请阅读：[A Nerd’s Guide to Color on the Web](https://css-tricks.com/nerds-guide-color-web/){:target="_blank"}    
  
 
 ``在互联网上，有许多处理颜色的方法。我认为了解所使用的机制是很有帮助的，颜色也不例外。让我们深入探讨一些关于互联网上颜色的技术细节。``  
@@ -100,7 +100,7 @@ Example: hsla(150, 50%, 50%, 0.5);
   
 ![]({{site.baseurl}}/img/hsla.gif)  
   
-**几年前，Chris还开发了一个很棒的工具，名为"hsla explorer"，你可以在[这里查看](https://css-tricks.com/examples/HSLaExplorer/)。**
+**几年前，Chris还开发了一个很棒的工具，名为"hsla explorer"，你可以在[这里查看](https://css-tricks.com/examples/HSLaExplorer/){:target="_blank"} 。**
   
 
 如果你对处理颜色没什么特别的技巧，hsla()提供了一些相当简单的规则，可以为开发者创建出漂亮的效果。在下面的生成色彩部分，我们将更详细地介绍这个。  
@@ -167,10 +167,10 @@ currentColor是一个非常有用的值。它遵循层叠规则，并且对于�
   
 CSS预处理器非常适用于调整颜色。以下是一些不同预处理器关于颜色函数的文档链接：  
   
-* [Sass functions](https://sass-lang.com/documentation/modules/)
-* [Less functions](https://lesscss.org/functions/#color-operations)
-* [Stylus functions](https://stylus-lang.com/docs/bifs.html)
-* [颜色函数的PostCSS插件](https://github.com/postcss/postcss-color-function)示例  
+* [Sass functions](https://sass-lang.com/documentation/modules/){:target="_blank"}  
+* [Less functions](https://lesscss.org/functions/#color-operations){:target="_blank"}  
+* [Stylus functions](https://stylus-lang.com/docs/bifs.html){:target="_blank"}  
+* [颜色函数的PostCSS插件](https://github.com/postcss/postcss-color-function){:target="_blank"}  示例  
   
 
 以下是我们可以使用Sass进行的一些酷炫操作：  
@@ -184,7 +184,7 @@ saturate($color, $amount)
 ```    
   
 
-确实，使用预处理器可以以编程方式混合和修改颜色的方法有数十种，我们不会深入讨论所有方法，但是以下是一个很好的[互动资源](http://jackiebalzer.com/color)，可以提供更详细的信息。  
+确实，使用预处理器可以以编程方式混合和修改颜色的方法有数十种，我们不会深入讨论所有方法，但是以下是一个很好的[互动资源](http://jackiebalzer.com/color){:target="_blank"}，可以提供更详细的信息。  
   
 # 颜色属性（Color Properties）    
   
@@ -195,7 +195,7 @@ saturate($color, $amount)
 # 盒子阴影和文本阴影（Box and Text Shadows）  
   
 
- box-shadow和text-shadow属性可以接受颜色值。文本阴影可以接受2-3个值，即水平阴影（h-shadow）、垂直阴影（v-shadow）和可选的模糊半径。盒子阴影可以接受2-4个值，包括水平阴影、垂直阴影、可选的模糊距离和可选的扩展距离。您还可以在开始时使用"inset"关键字来创建倒置的阴影效果。这个[网站](http://www.cssmatic.com/box-shadow)提供了一个很好的演示，其中包含易于复制粘贴的代码。   
+ box-shadow和text-shadow属性可以接受颜色值。文本阴影可以接受2-3个值，即水平阴影（h-shadow）、垂直阴影（v-shadow）和可选的模糊半径。盒子阴影可以接受2-4个值，包括水平阴影、垂直阴影、可选的模糊距离和可选的扩展距离。您还可以在开始时使用"inset"关键字来创建倒置的阴影效果。这个[网站](http://www.cssmatic.com/box-shadow){:target="_blank"}  提供了一个很好的演示，其中包含易于复制粘贴的代码。   
    
 
  # 渐变（Gradients）  
@@ -212,7 +212,7 @@ saturate($color, $amount)
   
 
  
-大多数渐变的语法并不难编写，但我非常喜欢使用[在线渐变生成器](https://www.colorzilla.com/gradient-editor/)，~~因为它还会为了支持IE6-9而创建复杂的filter属性~~。这里[还有一个非常漂亮的UI渐变生成器](https://uigradients.com/#Combi)。这个生成器非常酷，而且是开源的，你可以为其做出贡献。    
+大多数渐变的语法并不难编写，但我非常喜欢使用[在线渐变生成器](https://www.colorzilla.com/gradient-editor/){:target="_blank"}  ，~~因为它还会为了支持IE6-9而创建复杂的filter属性~~。这里[还有一个非常漂亮的UI渐变生成器](https://uigradients.com/#Combi){:target="_blank"}  。这个生成器非常酷，而且是开源的，你可以为其做出贡献。    
   
 
 在SVG中创建渐变也同样简单。我们可以定义一个带有id的块，并在其中引用。我们还可以选择性地定义渐变的表面区域。  
@@ -231,7 +231,7 @@ saturate($color, $amount)
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>  
   
 
-在WebKit浏览器中，也可以实现渐变文本效果，我们在[CSS-Tricks网站](https://css-tricks.com/snippets/css/gradient-text/)上有一个非常好的代码片段可以使用。  
+在WebKit浏览器中，也可以实现渐变文本效果，我们在[CSS-Tricks网站](https://css-tricks.com/snippets/css/gradient-text/){:target="_blank"}  上有一个非常好的代码片段可以使用。  
   
 
 # 生成色彩（Generative Color）    
@@ -274,7 +274,40 @@ saturate($color, $amount)
 
 在下面的代码中，我借助Math.random()函数，将其应用于RGB值中，以在相同的范围内生成丰富多彩的颜色。这个演示是基于React的三维虚拟现实体验。如果我使用for循环，也能达到相同的效果，但我选择随机化颜色以反映运动的感觉。这个项目的创意无限。  
 
-[![]({{site.baseurl}}/img/three2.png)](https://sdras.github.io/react-aframe-demo1/)  
+[![]({{site.baseurl}}/img/three2.png)](https://sdras.github.io/react-aframe-demo1/){:target="_blank"}  
+  
+<p align="center">点击图片查看事例</p>    
+  
+
+# JavaScript  
+
+```javascript
+class App extends React.Component {
+  render () {
+    const items = [],
+          amt1 = 5,
+          amt2 = 7;
+    for (let i = 0; i < 30; i++) {
+     let rando = Math.floor(Math.random() * (amt2 - 0 + 1)) + 0,
+          addColor1 = parseInt(rando * i),
+          addColor2 = 255 - parseInt(7 * i),
+          updateColor = `rgb(200, ${addColor1}, ${addColor2})`;
+      items.push(
+	    // ...
+        );
+    }
+    return (
+      
+       // ...
+       {items}
+      
+    );
+  }
+}
+```  
+
+  
+
   
 
   
